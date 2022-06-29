@@ -1,0 +1,12 @@
+
+<h1><%= @destination.name %>, <%= @destination.country %> </h1>
+
+<ol>
+<% @posts_t.each do |post| %>
+    <li> <%= link_to post.title, post_path(post) %> | <%= post.created_at %> </li>
+
+<% end %>
+</ol>
+
+<p> Avg age of bloggers: <%= @destination.avg_age %></p>
+<p> Featured Post: <%= link_to @posts_l.first.title, post_path(@posts_l.first) %> </p>
